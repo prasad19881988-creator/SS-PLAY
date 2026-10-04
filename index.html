@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <title>SS PLAY — Entertainment</title>
+  <meta name="description" content="SS PLAY — a professional entertainment streaming platform by SS Enterprises.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="SS PLAY by SS Enterprises"><img src="ss-enterprises-logo.png" alt="SS Enterprises"><span>SS</span> PLAY</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#series">Series</a>
+      <a href="#premium">Premium</a>
+    </nav>
+    <button class="login-btn" id="loginBtn">Sign In</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SS ENTERPRISES PRESENTS</p>
+        <h1>Entertainment.<br><strong>Anytime. Anywhere.</strong></h1>
+        <p class="hero-text">Discover original shows, licensed movies, regional stories and exclusive entertainment on SS PLAY.</p>
+        <div class="actions">
+          <button class="primary" data-play>▶ Watch Now</button>
+          <a class="secondary" href="#premium">View Plans</a>
+        </div>
+        <p class="legal-note">Only content owned, licensed or otherwise authorized by SS PLAY will be published.</p>
+      </div>
+      <div class="hero-art">
+        <img class="promo-art" src="ss-play-promo.png" alt="SS PLAY entertainment platform">
+      </div>
+    </section>
+
+    <section class="section" id="movies">
+      <div class="section-head"><h2>Featured Movies</h2><span>Licensed & Original</span></div>
+      <div class="cards" id="movieCards"></div>
+    </section>
+
+    <section class="section" id="series">
+      <div class="section-head"><h2>Web Series</h2><span>New episodes</span></div>
+      <div class="cards" id="seriesCards"></div>
+    </section>
+
+    <section class="premium" id="premium">
+      <div>
+        <p class="eyebrow">SS PLAY PREMIUM</p>
+        <h2>More stories. Fewer interruptions.</h2>
+        <p>Premium will unlock ad-free viewing, exclusive releases and premium-only content.</p>
+      </div>
+      <div class="plan">
+        <small>Starting plan</small>
+        <strong>₹49<span>/month</span></strong>
+        <button class="primary" id="premiumBtn">Coming Soon</button>
+      </div>
+    </section>
+
+    <section class="section legal" id="legal">
+      <h2>Legal & Content Policy</h2>
+      <p>SS PLAY will publish only original, licensed or otherwise legally authorized content. Copyright ownership and distribution rights will be recorded before publication. User uploads, if enabled later, will be subject to rights declarations, takedown procedures and platform terms.</p>
+      <div class="legal-links">
+        <a href="#">Terms of Use</a><a href="#">Privacy Policy</a><a href="#">Copyright Policy</a><a href="#">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><b>SS PLAY</b><br><span>By SS Enterprises</span></div>
+    <div>© <span id="year"></span> SS Enterprises. All rights reserved.</div>
+  </footer>
+
+  <div class="modal hidden" id="playerModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="close" data-close>×</button>
+      <div class="video-placeholder">
+        <div class="big-play">▶</div>
+        <p>Your authorized video will play here.</p>
+      </div>
+      <h3 id="modalTitle">SS PLAY</h3>
+      <p class="muted">Video playback will be connected to the secure streaming backend in Phase 2.</p>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="loginModal" role="dialog" aria-modal="true">
+    <div class="modal-box small">
+      <button class="close" data-close>×</button>
+      <h2>Sign in to SS PLAY</h2>
+      <input placeholder="Email address" type="email">
+      <input placeholder="Password" type="password">
+      <button class="primary full">Continue</button>
+      <p class="muted">Authentication will be connected to Supabase in Phase 2.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
