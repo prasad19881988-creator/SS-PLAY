@@ -76,13 +76,14 @@
 
   <div class="modal hidden" id="playerModal" role="dialog" aria-modal="true">
     <div class="modal-box">
-      <button class="close" data-close>×</button>
-      <div class="video-placeholder">
+      <button class="close" data-close aria-label="Close">×</button>
+      <div id="videoStage" class="video-placeholder">
         <div class="big-play">▶</div>
-        <p>Your authorized video will play here.</p>
+        <p>Choose published content to start watching.</p>
       </div>
       <h3 id="modalTitle">SS PLAY</h3>
-      <p class="muted">Video playback will be connected to the secure streaming backend in Phase 2.</p>
+      <p id="modalDescription" class="muted"></p>
+      <p id="modalNotice" class="muted">Only authorized videos can be played.</p>
     </div>
   </div>
 
@@ -90,13 +91,17 @@
     <div class="modal-box small">
       <button class="close" data-close>×</button>
       <h2>Sign in to SS PLAY</h2>
-      <input placeholder="Email address" type="email">
-      <input placeholder="Password" type="password">
-      <button class="primary full">Continue</button>
-      <p class="muted">Authentication will be connected to Supabase in Phase 2.</p>
+      <form id="loginForm">
+        <input id="loginEmail" placeholder="Email address" type="email" autocomplete="email" required>
+        <input id="loginPassword" placeholder="Password" type="password" autocomplete="current-password" required>
+        <button class="primary full" type="submit" id="loginSubmit">Continue</button>
+      </form>
+      <p id="loginMessage" class="muted" role="status">Sign in with your SS PLAY account.</p>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
